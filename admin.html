@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Admin Panel - Tambah Brand & Item</h2>
+    <h3>Tambah Brand</h3>
+    <input type="text" id="newBrand" placeholder="Nama Brand">
+    <button onclick="addBrand()">Tambah Brand</button>
+
+    <h3>Tambah Item</h3>
+    <input type="text" id="itemBrand" placeholder="Nama Brand">
+    <input type="text" id="itemName" placeholder="Nama Item">
+    <input type="text" id="itemCode" placeholder="Kode Item (opsional)">
+    <button onclick="addItem()">Tambah Item</button>
+
+    <h3>Data Brands dan Items</h3>
+    <div id="dataDisplay"></div>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
