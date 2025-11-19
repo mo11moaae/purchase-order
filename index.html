@@ -20,17 +20,18 @@
       </div>
       <div>
         <label>Alamat Toko (Wajib):</label>
-        <textarea id="alamatToko" required></textarea>
+        <input type="text" id="alamatToko" required>
       </div>
       <div>
         <label>Pilih Brand:</label>
+        <input type="text" id="brandSearch" placeholder="Cari brand...">
         <select id="brandSelect">
           <option value="">-- Pilih Brand --</option>
         </select>
       </div>
       <div>
         <label>Cari Item:</label>
-        <input type="text" id="itemSearch" placeholder="Cari item...">
+        <input type="text" id="itemSearch" placeholder="Cari item berdasarkan nama/kode...">
         <ul id="itemList"></ul>
       </div>
       <div id="itemContainer">
@@ -58,8 +59,10 @@
       </div>
       <button type="button" onclick="previewPO()">Preview</button>
       <button type="button" onclick="submitPO()">Kirim PO</button>
+      <button type="button" onclick="window.location.href='po-list.html'">Lihat PO Terkirim</button>
     </form>
   </div>
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
