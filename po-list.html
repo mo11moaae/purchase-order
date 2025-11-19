@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar PO Terkirim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Daftar Purchase Order Terkirim</h2>
+    <div id="poList"></div>
+  </div>
+  <script>
+    // Ambil data dari Google Sheets (via Apps Script jika Anda setup)
+    // Karena tidak ada API read, Anda harus lihat langsung di Google Sheets
+    document.getElementById('poList').innerHTML = `
+      <p>PO yang dikirim akan masuk ke Google Sheets.</p>
+      <p>Anda bisa melihatnya di: <a href="https://docs.google.com/spreadsheets/d/1JdIaqlqesU1VsGvHIOjxoYZawCXAXJiUm3CeQ2JWXkk/edit" target="_blank">Lihat Google Sheets</a></p>
+    `;
+  </script>
+</body>
+</html>
