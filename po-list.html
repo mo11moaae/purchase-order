@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar PO Terkirim</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Daftar PO Terkirim</h2>
+      <div class="user-badge" id="userBadge">Loading...</div>
+    </div>
+
+    <div id="poList">
+      <p style="text-align:center; color:#999; padding:40px;">Memuat data dari Google Sheets...</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Purchase Order MCP &copy; 2025 | by MJS
+  </div>
+
+  <script>
+    document.getElementById('userBadge').textContent = localStorage.getItem('username') || 'User';
+
+    // Karena tidak bisa baca GSheet tanpa server, kita tampilkan pesan
+    document.getElementById('poList').innerHTML = `
+      <p style="text-align:center; color:#666; margin:40px 0;">
+        Data PO yang dikirim akan muncul di Google Sheets.<br>
+        Silakan buka link berikut untuk melihat semua pesanan:<br><br>
+        <a href="https://docs.google.com/spreadsheets/d/1JdIaqlqesU1VsGvHIOjxoYZawCXAXJiUm3CeQ2JWXkk/edit" target="_blank" style="color:#1a5276; text-decoration:none; font-weight:600;">
+          📊 Buka Google Sheets PO Data
+        </a>
+      </p>
+    `;
+  </script>
+</body>
+</html>

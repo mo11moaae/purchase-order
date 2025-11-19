@@ -1,0 +1,16 @@
+{
+  "name": "Purchase Order MCP",
+  "short_name": "MCP PO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a5276",
+  "theme_color": "#1a5276",
+  "description": "Aplikasi Purchase Order untuk sales dan admin",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Purchase Order</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Form Purchase Order</h2>
+      <div class="user-badge" id="userBadge">Loading...</div>
+    </div>
+
+    <form id="poForm">
+      <div class="form-group">
+        <label>Tanggal:</label>
+        <input type="text" id="tanggal" readonly class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Nama Toko (Wajib):</label>
+        <input type="text" id="namaToko" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label>Alamat Toko (Wajib):</label>
+        <textarea id="alamatToko" class="form-control" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Brand:</label>
+        <div class="search-container">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="brandSearch" placeholder="Cari brand..." class="form-control">
+        </div>
+        <select id="brandSelect" class="form-control">
+          <option value="">-- Pilih Brand --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Cari Item:</label>
+        <div class="search-container">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="itemSearch" placeholder="Cari nama/kode item..." class="form-control">
+        </div>
+        <ul id="itemList"></ul>
+      </div>
+
+      <div id="itemContainer"></div>
+
+      <div class="form-group">
+        <label>Diskon 1:</label>
+        <input type="text" id="diskon1" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Diskon 2:</label>
+        <input type="text" id="diskon2" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Diskon 3:</label>
+        <input type="text" id="diskon3" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Diskon 4:</label>
+        <input type="text" id="diskon4" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Keterangan:</label>
+        <textarea id="keterangan" class="form-control"></textarea>
+      </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary" onclick="previewPO()">Preview</button>
+        <button type="button" class="btn btn-success" onclick="submitPO()">Kirim PO</button>
+        <button type="button" class="btn btn-secondary" onclick="window.location.href='po-list.html'">Lihat PO</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">
+    Purchase Order MCP &copy; 2025 | by MJS
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

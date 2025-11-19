@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Purchase Order MCP</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Admin Panel</h2>
+      <div class="user-badge" id="userBadge">Loading...</div>
+    </div>
+
+    <div class="admin-section">
+      <h3>➕ Tambah Brand Baru</h3>
+      <input type="text" id="newBrand" placeholder="Masukkan nama brand..." class="form-control">
+      <button class="btn btn-success" onclick="addBrand()">Tambah Brand</button>
+    </div>
+
+    <div class="admin-section">
+      <h3>➕ Tambah Item Baru</h3>
+      <input type="text" id="itemBrand" placeholder="Nama Brand" class="form-control">
+      <input type="text" id="itemName" placeholder="Nama Item" class="form-control">
+      <input type="text" id="itemCode" placeholder="Kode Item (opsional)" class="form-control">
+      <button class="btn btn-success" onclick="addItem()">Tambah Item</button>
+    </div>
+
+    <div class="admin-section">
+      <h3>📋 Data Brand & Item</h3>
+      <div id="dataDisplay"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Purchase Order MCP &copy; 2025 | by MJS
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
